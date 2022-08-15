@@ -41,6 +41,7 @@ public class User {
 		this.phoneNumber = phoneNumber;
 	}
 
+	//toString 재정의
 	@Override
 	public String toString() {
 
