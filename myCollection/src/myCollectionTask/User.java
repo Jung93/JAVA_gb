@@ -47,8 +47,4 @@ public class User {
 
 		return name+", "+id+", "+phoneNumber;
 	}
-	
-	
-	
-	
 }
