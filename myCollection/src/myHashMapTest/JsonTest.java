@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 
 public class JsonTest {
 	public static void main(String[] args) {
+		//JSON부분 녹화본 복습하기
+		
 		HashMap<String, Object> userMap = new HashMap<String, Object>() ;
 		JSONObject userJSON = null;
 		JSONArray users = new JSONArray();

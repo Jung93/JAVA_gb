@@ -11,8 +11,6 @@ public class Student {
 		this.name = name;
 	}
 
-
-
 	public int getNumber() {
 		return number;
 	}
@@ -48,13 +46,11 @@ public class Student {
 		}
 		return false;
 	}
-	
+	//equals 재정의할 때는 hashCode도 무조건 같이 재정의
+	//equals에서 비교하려는 값을 리턴하도록.
 	@Override
 	public int hashCode() {
 
 		return this.number;
 	}
-	
-	
-	
 }
