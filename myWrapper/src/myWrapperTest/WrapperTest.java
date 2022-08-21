@@ -9,14 +9,16 @@ public class WrapperTest {
 //		Integer data_I = Integer.valueOf(data_i);
 		
 //		auto boxing
-		Integer data_I = data_i;
+		Integer data_I = data_i + 1;
+		System.out.println(data_I);
 		
 		//unboxing
 //		data_i = data_I.intValue();
 		
 //		auto unboxing
-		data_i = data_I;
+		data_i = data_I+1;
 		
+		System.out.println(data_i);
 		//a
 	}
 }

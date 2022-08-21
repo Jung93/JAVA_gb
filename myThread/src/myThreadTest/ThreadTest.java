@@ -14,7 +14,7 @@ public class ThreadTest {
 //		t2.run();
 		
 		//람다식으로 runner 재정의 및 구현
-		Runnable runnner = ()->{
+		Runnable runner = ()->{
 			for (int i = 0; i < 5; i++) {
 				System.out.println(Thread.currentThread().getName());
 				try {Thread.sleep(500);} catch (InterruptedException e) {;}
@@ -22,13 +22,14 @@ public class ThreadTest {
 		};
 		
 //		Thread2가 Runnable을 지정받고 있기 때문에 Runnable 타입도 가짐.
-		Runnable t1 = new Thread2();//업 캐스팅
-		Thread2 t2 = new Thread2();
+//		Runnable t1 = new Thread2();//업 캐스팅
+//		Thread2 t2 = new Thread2();
+//		
 		
 //		재정의한 run()을 전달하기 위해 매개변수로 runner 넘김
 		//String 타입을 넘겨 thread 이름으로 설정 가능
-		Thread thread1 = new Thread(runnner,"!");
-		Thread thread2 = new Thread(runnner,"?");
+		Thread thread1 = new Thread(runner,"!");
+		Thread thread2 = new Thread(runner,"?");
 		
 		
 		thread1.start();

@@ -8,4 +8,5 @@ public interface LambdaInter {
 	//타입 이름 (매개변수);
 	//아직 구현되지 않은 메소드
 	boolean checkMultipleOf10(int number);
+	
 }
