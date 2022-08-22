@@ -28,6 +28,7 @@ public class StreamTest {
 //		//람다식
 //		chinaTown.values().stream().forEach(price-> System.out.println(price));
 //		chinaTown.values().forEach(price-> System.out.println(price));
+//											      //참조형 문법
 //		chinaTown.values().forEach(System.out::println);
 		
 //		datas.add(10);
@@ -44,8 +45,8 @@ public class StreamTest {
 		//IntStream.rangeClosde(start, end) start ~ end
 //		IntStream.range(1, 10).forEach(System.out::println);
 //		//1~10까지 출력
-		IntStream.range(1, 11).forEach(System.out::println);
-		IntStream.rangeClosed(1, 10).forEach(System.out::println);
+//		IntStream.range(1, 11).forEach(System.out::println);
+//		IntStream.rangeClosed(1, 10).forEach(System.out::println);
 		
 		//chars() : 문자열을 IntStream으로 변경
 //		String data = "ABC";
@@ -59,9 +60,9 @@ public class StreamTest {
 //		IntStream.rangeClosed(1, 10).filter(number -> number%2==0).forEach(System.out::println);
 
 		//sorted() : 오름차순으로 정렬한다
-//		Integer[] arData = {10, 40, 20, 30};
-//		//가변인자 녹화본
-//		ArrayList<Integer> datas = new ArrayList<Integer>(Arrays.asList(arData));
+		Integer[] arData = {10, 40, 20, 30};
+//		//가변인자 녹화본. 어떤 값이 얼마나 들어올지 알 수 없기 때문에 매개변수 자리에 ...로 표현
+		ArrayList<Integer> datas = new ArrayList<Integer>(Arrays.asList(arData));
 //		System.out.println(datas);
 //		//오름차순
 //		datas.stream().sorted().forEach(System.out::println);
@@ -70,14 +71,32 @@ public class StreamTest {
 		
 		//collect() : 결과를 다양한 타입으로 리턴해준다
 //		ArrayList<Integer> results = 
+//		//collect에서 toList를 했기 때문에 results에 담기 위해선 다운캐스팅을 해야한다.
 //				(ArrayList<Integer>)datas.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
 //		System.out.println(results);
 		
-//		Collectors.joing("구분점");
+//		Collectors.joining("구분점");
 //		문자열 타입의 값을 원하는 구분점을 연결하여 리턴한다
 //		문자열 타입이 아닌 값은 joining을 사용할 수 없다.
 //		String result = datas.stream().sorted().map(String::valueOf).collect(Collectors.joining(", "));
 //		
 //		System.out.println(result);
+		
+//		ArrayList<String> phones = new ArrayList<>();
+//		phones.add("010");
+//		phones.add("3894");
+//		phones.add("3964");
+//		ArrayList<Integer> phonesa = new ArrayList<>();
+//		phonesa.add(0);
+//		phonesa.add(3894);
+//		phonesa.add(3964);
+//		System.out.println(phonesa);
+//		//ArrayList를 Integer로 할 경우 010이 8로 나옴
+//		String result = phones.stream().collect(Collectors.joining("-"));
+//		System.out.println(result);
+		//8진법 때문인가. 08, 09 입력 안됨
+//		int data_i = 07;
+//		System.out.println(data_i);
+		
 	}
 }
