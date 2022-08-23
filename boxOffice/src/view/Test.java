@@ -9,6 +9,7 @@ public class Test {
 	public static void main(String[] args) throws IOException {
 		BoxOfficeDAO boxOfficeDAO = new BoxOfficeDAO();
 		boxOfficeDAO.selectAll().forEach(System.out::println);
+//		System.out.println(boxOfficeDAO.selectAll().get(0));
 		
 //		boxOfficeDAO.select("0").forEach(System.out::println);
 		
@@ -32,5 +33,7 @@ public class Test {
 //		if(boxOfficeDAO.add(boxOfficeVO)) {
 //			System.out.println("추가 성공");
 //		}
+		
+		
 	}
 }

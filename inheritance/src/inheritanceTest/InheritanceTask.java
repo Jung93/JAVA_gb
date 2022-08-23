@@ -24,7 +24,7 @@ class Car{
 	}
 	
 }
-
+//한번에 하나의 클래스만 상속 받을 수 있음.
 class SuperCar extends Car{
 //	모드
 	String mode;
@@ -70,6 +70,7 @@ public class InheritanceTask {
 		rollsroyce.engineStop();
 		rollsroyce.openRoof();
 		rollsroyce.closeRoof();
+		System.out.println(rollsroyce.mode);
 	}
 }
 

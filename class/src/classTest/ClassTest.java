@@ -3,6 +3,7 @@ package classTest;
 class A{
 	int data;
 	
+	
 	A(int data){
 		System.out.println(this);
 		this.data = data;
